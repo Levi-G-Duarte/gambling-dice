@@ -1,5 +1,6 @@
 //Gambling Dice Program
 let cl = console.log;
+
 function rollDice() {
     const numOfDice = document.getElementById('numOfDice').value;
     const diceResult = document.getElementById('diceResult');
@@ -7,6 +8,7 @@ function rollDice() {
     const gameOutcome = document.getElementById('gameOutcome');
     const values = [];
     const images = [];
+    const money = 100
 
     for (let i = 0; i < numOfDice; i++){
         const value = Math.floor(Math.random()*6) + 1;
@@ -19,7 +21,7 @@ function rollDice() {
 
     const valueNum = values.join(", ");
 
-    if (valueNum === "2") {
+    if (valueNum == 2) {
         // cl(diceResult)
         gameOutcome.textContent = "You've Won";
     }
