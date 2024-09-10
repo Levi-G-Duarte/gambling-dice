@@ -24,6 +24,7 @@ function rollDice() {
     if (valueNum == 2) {
         // cl(diceResult)
         gameOutcome.textContent = "You've Won";
+        gameOutcome.style.color = "green";
     }
     else if(valueNum === "1, 1") {
         // cl(diceResult)
@@ -35,5 +36,7 @@ function rollDice() {
     }
     else {
         gameOutcome.textContent = "You lost";
+        gameOutcome.style.color = "red";
+        money += 10 
     }
 }
